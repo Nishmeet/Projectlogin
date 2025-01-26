@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Dynamic Form</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div class="container">
+        
+        <div class="image-container">
+            
+            <div>
+                <h1><span id="connect">Connect</span></h1></div>
+        </div>
+        <div class="form-container">
+            <div id="welcomeMessage" class="welcome-message">
+                <h1>Welcome to our website!</h1>
+                <div id="choiceForm">
+                    <button onclick="showForm('loginForm')">Log In</button>
+                    <button onclick="showForm('signupForm')">Sign Up</button>
+                </div>
+            </div>
+            <div id="loginForm" class="form-content" style="display: none;">
+                <h2>Log In</h2>
+                <form>
+                    <label for="login-email">Email Address</label>
+                    <input type="email" id="login-email" name="login-email"><br><br>
+                    <label for="login-password">Password</label>
+                    <input type="password" id="login-password" name="login-password"><br><br>
+                    <button type="submit">Log In</button>
+                </form>
+            </div>
+            <div id="signupForm" class="form-content" style="display: none;">
+                <h2>Sign Up</h2>
+                <form>
+                    
+                    <label for="username">Username</label>
+                    <input type="text" id="username" name="username"><br><br>
+                    <label for="email">Email Address</label>
+                    <input type="email" id="email" name="email"><br><br>
+                    <label for="dob">Date of Birth</label>
+                    <input type="date" id="dob" name="dob"><br><br>
+                    <label for="gender">Gender</label>
+                    <select id="gender" name="gender">
+                        <option value="male">Male</option>
+                        <option value="female">Female</option>
+                        <option value="other">Other</option>
+                    </select><br><br>
+                    <label for="password">Password</label>
+                    <input type="password" id="password" name="password"><br><br>
+                    <label for="confirmPassword">Confirm Password</label>
+                    <input type="password" id="confirmPassword" name="confirmPassword"><br><br>
+                    <button type="submit">Register</button>
+                </form>
+            </div>
+        </div>
+    </div>
+     <!-- The Modal -->
+  <div id="alertModal" class="modal"> 
+    <div class="modal-content"> 
+      <span class="close">&times;</span> 
+      <p id="alertModalBody"></p> 
+    </div> 
+  </div>
+
+    <script type="module" src="script.js"></script>
+</body>
+</html>
